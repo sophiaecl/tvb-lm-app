@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-const Logo = (props: any) => {
+const Logo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
