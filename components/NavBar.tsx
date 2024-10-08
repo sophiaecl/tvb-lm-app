@@ -22,6 +22,18 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 
+const Logo = (props: any) =>{
+    return (
+      <img
+        src="../logo.png" 
+        alt="logo"                    
+        //height={32}                   
+        {...props}                    
+      />
+    );
+  };
+  
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -49,13 +61,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
-          </Text>
-
+         <Logo height={32} />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
